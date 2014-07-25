@@ -1,5 +1,5 @@
 download.file("https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2","data.csv,bz2")
 con<-bzfile("data.csv.bz2","r")
-data<-read.csv(con)
+data<-read.csv(con,stringsAsFactors=F)
 close(con)
 str(data)
